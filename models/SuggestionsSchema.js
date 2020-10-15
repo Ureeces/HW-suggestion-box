@@ -5,7 +5,7 @@ const SuggestionSchema = new mongoose.Schema({
     name: {type: String, lowercase: true, required: true},
     suggestion: {type: String, lowercase: true, required: true},
     likes: {type: Number, default: 0},
-    anonymous: {type: Boolean},
+    anonymous: {type: Boolean, default: true},
     timeCreated: {type: Date, default: Date.now}
 });
 

@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 const {
-    getAllSuggestions
+    getAllSuggestions,
     // getSuggestionsByName,
     // getSingleSuggestion,
-    // createSuggestion,
+    createSuggestion,
     // updateSuggestion,
     // deleteSuggestion
 } = require('../controllers/suggestionController');
@@ -17,4 +17,5 @@ router.get('/', (req, res) => {
 
 router.get('/all-suggestions', getAllSuggestions);
 
+router.post('/create-suggestion', createSuggestion);
 module.exports = router;
